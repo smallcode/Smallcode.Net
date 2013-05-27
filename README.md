@@ -1,5 +1,7 @@
-Smallcode.Net
-===============
+#Smallcode.Net
+Fluent HttpWebClient, Http parser and Json parser.
+### Usage
+```csharp
 string result = new Url("http://www.happay.com").CreateRequest().Get();
 string result = new Url("http://www.happay.com").CreateRequest()
                                         .WithCookies(Cookie)
@@ -16,3 +18,4 @@ string result = new Url("http://www.happay.com").CreateRequest()
                                         .NotRedirect()
                                         .ByAjax()
                                         .Post(data);
+```
