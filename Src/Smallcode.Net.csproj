@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48002719-8868-4A08-828B-86CC8A523FC2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Smallcode.Net</RootNamespace>
+    <AssemblyName>Smallcode.Net</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\ScrapySharp.1.5\lib\net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ScrapySharp">
+      <HintPath>..\packages\ScrapySharp.1.5\lib\net40\ScrapySharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="By.cs" />
+    <Compile Include="Exceptions\HtmlException.cs" />
+    <Compile Include="Exceptions\NotFoundException.cs" />
+    <Compile Include="Extensions\HtmlExtensions.cs" />
+    <Compile Include="Extensions\UriExtensions.cs" />
+    <Compile Include="Extensions\RandomExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\HttpWebRequestExtensions.cs" />
+    <Compile Include="Extensions\HttpWebRequestExtensions.Get.cs" />
+    <Compile Include="Extensions\HttpWebRequestExtensions.Post.cs" />
+    <Compile Include="Extensions\HttpWebResponseExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.GetValue.cs" />
+    <Compile Include="Extensions\CookieContainerExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.Replace.cs" />
+    <Compile Include="Extensions\StringExtensions.Uri.cs" />
+    <Compile Include="Extensions\StringExtensions.Unescape.cs" />
+    <Compile Include="Extensions\StringExtensions.Escape.cs" />
+    <Compile Include="Extensions\StringExtensions.Cryptography.cs" />
+    <Compile Include="Extensions\StringExtensions.Regex.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.To.cs" />
+    <Compile Include="Extensions\UrlEncodingExtensions.cs" />
+    <Compile Include="FileItem.cs" />
+    <Compile Include="FormData.cs" />
+    <Compile Include="FormParser.cs" />
+    <Compile Include="Html.cs" />
+    <Compile Include="HttpWebRequestMethod.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptEngine.cs" />
+    <Compile Include="HttpWebRequestUserAgent.cs" />
+    <Compile Include="Url.cs" />
+    <Compile Include="UrlEncoding.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
