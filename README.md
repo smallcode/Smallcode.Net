@@ -43,4 +43,21 @@ var elements = html.FindElements(By.TagName("div"));
 #### Json parser 
 
 ```csharp
+//JObject 
+var JsonString = @"{ code: '10000', msg: 'success', data:{html:'html',bookes:[{name:'book1'},{name:'book2'}]},""style"":""color: rgb(153, 153, 153);"" }";};
+var json = JsonString.ToJObject();
+json["code"].ShouldEqual(10000);
+json["msg"].ShouldEqual("success");
+json["style"].ShouldEqual("color: rgb(153, 153, 153);");
+json["data"]["bookes"][0]["name"].ShouldEqual("book1");
+                
+//Generic 
+var json = JsonString.ToJson<Ajax>();
+test.Code.ShouldEqual(10000);
+test.Msg.ShouldEqual("success");
+test.Style.ShouldEqual("color: rgb(153, 153, 153);");
+test.Data.Html.ShouldEqual("html");
+test.Data.Bookes.Count.ShouldEqual(2);
+test.Data.Bookes[0].Name.ShouldEqual("book1");
+test.Data.Bookes[1].Name.ShouldEqual("book2");
 ```
