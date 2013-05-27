@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1A25B7D5-DED2-4FBD-B9FC-9F7C8176F062}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Smallcode.Net.Test</RootNamespace>
+    <AssemblyName>Smallcode.Net.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Machine.Specifications">
+      <HintPath>..\packages\Machine.Specifications.0.5.12\lib\net40\Machine.Specifications.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\Html解析扩展规范.cs" />
+    <Compile Include="Extensions\Json解析扩展规范.cs" />
+    <Compile Include="Extensions\Random扩展规范.cs" />
+    <Compile Include="Extensions\Uri扩展规范.cs" />
+    <Compile Include="Extensions\Uri生成扩展规范.cs" />
+    <Compile Include="Extensions\UrlEncoding扩展规范.cs" />
+    <Compile Include="Extensions\其他扩展规范.cs" />
+    <Compile Include="Extensions\加密扩展规范.cs" />
+    <Compile Include="Extensions\日期扩展规范.cs" />
+    <Compile Include="Extensions\替换扩展规范.cs" />
+    <Compile Include="Extensions\正则扩展规范.cs" />
+    <Compile Include="Extensions\编码扩展规范.cs" />
+    <Compile Include="Extensions\解码扩展规范.cs" />
+    <Compile Include="Extensions\转换扩展规范.cs" />
+    <Compile Include="FormParsers\当源代码中含有Form标签时.cs" />
+    <Compile Include="FormParsers\当源代码中没有含Form标签时.cs" />
+    <Compile Include="FormParsers\表单规范.cs" />
+    <Compile Include="HttpRequest\CustomRequestSpecification.cs" />
+    <Compile Include="HttpRequest\DefaultRequestSpecification.cs" />
+    <Compile Include="HttpRequest\FormDataSpecification.cs" />
+    <Compile Include="HttpRequest\GetSpecification.cs" />
+    <Compile Include="HttpRequest\PostSpecification.cs" />
+    <Compile Include="HttpRequest\RequestSpecification.cs" />
+    <Compile Include="HttpRequest\UrlEncodeSpecification.cs" />
+    <Compile Include="HttpRequest\UrlSpecification.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Smallcode.Net\Smallcode.Net.csproj">
+      <Project>{48002719-8868-4A08-828B-86CC8A523FC2}</Project>
+      <Name>Smallcode.Net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
